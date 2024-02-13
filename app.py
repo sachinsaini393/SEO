@@ -5,9 +5,12 @@ from Tab3 import content_generation
 from Tab1 import content_extraction
 from Tab2 import generate_keywords
 from Tab4 import *
+from flask_cors import CORS
 
 # Define the Flask app
 app = Flask(__name__)
+CORS(app)
+
 
 # Define the API endpoint
 @app.route("/tab1", methods=["POST"])
