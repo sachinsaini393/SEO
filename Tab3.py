@@ -5,7 +5,7 @@ import json
 openai.api_type = "azure"
 openai.api_base = "https://seorevolution-gpt4.openai.azure.com/"
 openai.api_version = "2023-03-15-preview"
-openai.api_key = "2acafeb8501f41e2a7f3cf3c5854287a"
+openai.api_key = ""
 
 def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
     results = {}
