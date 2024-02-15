@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'mktcontentgen-backend'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B07D04BEFCF84305A831E26631F9ABD4 }}
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
