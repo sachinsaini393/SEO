@@ -1,9 +1,9 @@
 import os
 import openai
-openai.api_type = ""
-openai.api_base = ""
-openai.api_version = ""
-openai.api_key = ""
+openai.api_type = os.getenv("OPENAI_API_TYPE")
+openai.api_base = os.getenv("OPENAI_API_BASE")
+openai.api_version = os.getenv("OPENAI_API_VERSION")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def content_extraction(reference1,reference2,reference3):
