@@ -1,5 +1,6 @@
 import os
 import openai
+import json
 openai.api_type = os.getenv("api_type")
 openai.api_base = os.getenv("api_base")
 openai.api_version = os.getenv("api_version")
