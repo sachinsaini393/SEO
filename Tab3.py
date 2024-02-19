@@ -2,10 +2,10 @@ import os
 import openai
 import json
 
-openai.api_type = ""
-openai.api_base = ""
-openai.api_version = ""
-openai.api_key = ""
+openai.api_type = os.getenv("api_type")
+openai.api_base = os.getenv("api_base")
+openai.api_version = os.getenv("api_version")
+openai.api_key = os.getenv("api_key")
 
 def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
     results = {}
