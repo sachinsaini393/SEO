@@ -1,9 +1,9 @@
 import os
 import openai
-openai.api_type = ""
-openai.api_base = ""
-openai.api_version = ""
-openai.api_key = ""
+openai.api_type = os.getenv("api_type")
+openai.api_base = os.getenv("api_base")
+openai.api_version = os.getenv("api_version")
+openai.api_key = os.getenv("api_key")
 
 # Weekly Tech Blog
 
