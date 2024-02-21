@@ -39,7 +39,7 @@ def generate_keywords(reference1,reference2,reference3,Topic,Keyword):
         )
         
             #results1.append ("Similar Keywords:\n"+  response_similar.choices[0].message['content']  )
-        results1["Similar Keywords"]=response_similar.choices[0].message['content'].strip()
+            results1["Similar Keywords"]=response_similar.choices[0].message['content'].strip()
     
     
 
@@ -67,8 +67,7 @@ def generate_keywords(reference1,reference2,reference3,Topic,Keyword):
         presence_penalty=0,  
         stop=["#", ";"]  
         )
-        results1["Long Tail Keywords"]=response_long_tail.choices[0].message['content'].strip()
-        #results1.append ("Long Tail Keywords :\n"+  response_long_tail.choices[0].message['content']  )
+            results1["Long Tail Keywords"]=response_long_tail.choices[0].message['content'].strip()
         
         
         if "Short Tail Keywords" in Keyword:
@@ -95,9 +94,8 @@ def generate_keywords(reference1,reference2,reference3,Topic,Keyword):
         presence_penalty=0,  
         stop=["#", ";"]  
         )
-        results1["Short Tail Keywords"]= response_short_tail.choices[0].message['content'].strip()
-        #results1.append ("Short Tail Keywords :\n"+  response_short_tail.choices[0].message['content']  )
-    
+            results1["Short Tail Keywords"]= response_short_tail.choices[0].message['content'].strip()
+        
 
         if "Semantically Related Keywords" in Keyword:
             system = '''
@@ -123,11 +121,8 @@ def generate_keywords(reference1,reference2,reference3,Topic,Keyword):
         presence_penalty=0,  
         stop=["#", ";"]  
         )
-        results1["Semantically Related Keywords"]=response_semantically.choices[0].message['content'].strip()
-        #results1.append ("Semantically Related Keywords :\n"+  response_semantically.choices[0].message['content']  )
-
-    #return results1["Similar Keyword"],results1["Long Tail Keyword"],results1["Short Tail Keyword"],results1["Semantically Related"]
-    #return "\n\n".join(results1)
+            results1["Semantically Related Keywords"]=response_semantically.choices[0].message['content'].strip()
+        
         return results1
     
     except Exception as exc:
