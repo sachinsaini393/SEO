@@ -32,7 +32,7 @@ def generate_kw():
         
         data2 = request.get_json()
     
-        result2 = generate_keywords(data2['reference1'], data2['reference2'], data2['reference3'], data2['Topic'], data2['Keywords'])
+        result2 = generate_keywords(data2['reference1'], data2['reference2'], data2['reference3'], data2['Topic'], data2['Keyword'])
         return jsonify(result2)
     except Exception as e2:
         return jsonify({"Error":str(e2)})
