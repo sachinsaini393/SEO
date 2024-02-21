@@ -26,7 +26,7 @@ def summarize_api():
         return jsonify({"Error":str(er)})
 
 
-@app.route('/keywords', methods=['POST'])
+@app.route('/keyword', methods=['POST'])
 def generate_kw():
     try:
         
