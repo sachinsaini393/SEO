@@ -57,7 +57,7 @@ def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
                 {"role": "user", "content": user_prompt_meta}
             ],
             temperature=0.8,
-            max_tokens=5000,
+            max_tokens=1000,
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0,
