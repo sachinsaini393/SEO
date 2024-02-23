@@ -6,6 +6,9 @@ openai.api_base = os.getenv("api_base")
 openai.api_version = os.getenv("api_version")
 openai.api_key = os.getenv("api_key")
 
+persona= '''You are a SEO Expert and your client is  an IT organisation which deals in these core services : IT consulting, business process outsourcing, digital transformation, application development, artificial intelligence, cloud services, data analytics, quality assurance, and IT infrastructure services.
+        and catered to clients across all sectors.
+'''
 
 def generate_keywords(reference1,reference2,reference3,Topic,Keyword):
     results1={}
@@ -13,10 +16,7 @@ def generate_keywords(reference1,reference2,reference3,Topic,Keyword):
     try:
         
         if "Similar Keywords" in Keyword:
-            system = ''' 
-        You are a SEO Expert and your client is  an IT organisation which deals in these core services : IT consulting, business process outsourcing, digital transformation, application development, artificial intelligence, cloud services, data analytics, quality assurance, and IT infrastructure services.
-        and catered to clients across all sectors.
-
+            system = f''' {persona}\n
         Instructions :
         You have to generate five Similar Keyword on given topic only.
         '''
@@ -44,10 +44,7 @@ def generate_keywords(reference1,reference2,reference3,Topic,Keyword):
     
 
         if "Long Tail Keywords" in Keyword:
-            system = '''
-        You are a SEO Expert and your client is  an IT organisation which deals in these core services : IT consulting, business process outsourcing, digital transformation, application development, artificial intelligence, cloud services, data analytics, quality assurance, and IT infrastructure services.
-        and catered to clients across all sectors.
-
+            system = f'''{persona}\n
         Instructions :
         You have to generate five Long Tail Keyword on given topic only.
         '''
@@ -71,11 +68,8 @@ def generate_keywords(reference1,reference2,reference3,Topic,Keyword):
         
         
         if "Short Tail Keywords" in Keyword:
-            system = '''
-        You are a SEO Expert and your client is  an IT organisation which deals in these core services : IT consulting, business process outsourcing, digital transformation, application development, artificial intelligence, cloud services, data analytics, quality assurance, and IT infrastructure services.
-        and catered to clients across all sectors.
-
-        Instructions :
+            system = f'''{persona}\n
+            Instructions :
         You have to generate five Short Tail Keyword on given topic only.
         '''
 
@@ -98,14 +92,10 @@ def generate_keywords(reference1,reference2,reference3,Topic,Keyword):
         
 
         if "Semantically Related Keywords" in Keyword:
-            system = '''
-        You are a SEO Expert and your client is  an IT organisation which deals in these core services : IT consulting, business process outsourcing, digital transformation, application development, artificial intelligence, cloud services, data analytics, quality assurance, and IT infrastructure services.
-        and catered to clients across all sectors.
-
+            system = f'''{persona}\n
         Instructions :
         You have to generate five Semantically Keyword on given topic only.
         '''
-
             user_prompt=f'''
 
         Extract top five Semantically keywords only for this topic : {Topic} from these three given article/blog post for SEO: {reference1},{reference2},{reference3}. 
