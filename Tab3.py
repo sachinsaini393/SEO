@@ -7,6 +7,11 @@ openai.api_base = os.getenv("api_base")
 openai.api_version = os.getenv("api_version")
 openai.api_key = os.getenv("api_key")
 
+persona='''
+You are a SEO Expert and your client is  an IT organisation which deals in these core services : IT consulting, business process outsourcing, digital transformation, application development, artificial intelligence, cloud services, data analytics, quality assurance, and IT infrastructure services.
+and catered to clients across all sectors.
+'''
+
 def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
     results = {}
     try:
@@ -15,10 +20,7 @@ def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
     #results=[]
     
         if 'Title' in content_type:
-            system = '''
-        You are a SEO Expert and your client is  an IT organisation which deals in these core services : IT consulting, business process outsourcing, digital transformation, application development, artificial intelligence, cloud services, data analytics, quality assurance, and IT infrastructure services.
-        and catered to clients across all sectors.
-        -----------------------------------------------
+            system = f'''{persona}\n
         Instruction : You have to strictly generate only one title.
         
         '''
@@ -43,11 +45,7 @@ def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
         
         
         if "Meta Description" in content_type:
-            system = '''
-        You are a SEO Expert and your client is  an IT organisation which deals in these core services : IT consulting, business process outsourcing, digital transformation, application development, artificial intelligence, cloud services, data analytics, quality assurance, and IT infrastructure services.
-        and catered to clients across all sectors.
-        
-        ---------------------------------------
+            system = f'''{persona}\n
         Instructions: You have to strictly generate only one meta description.
         
         '''
@@ -72,9 +70,7 @@ def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
     
     
         if "Alt Text" in content_type:
-            system = '''You are a SEO Expert and your client is  an IT organisation which deals in these core services : IT consulting, business process outsourcing, digital transformation, application development, artificial intelligence, cloud services, data analytics, quality assurance, and IT infrastructure services.
-        and catered to clients across all sectors.
-        '''
+            system = f'''{persona}'''
             user_prompt = f'''Generate 5 ideas only for images with ALT text that can be added on blog post for the topic : {Topic} And optimize it for the keyword : {finalized_keyword} for SEO.
             Give output in dictionary with key name as Idea , Idea Description and ALT text.
             
