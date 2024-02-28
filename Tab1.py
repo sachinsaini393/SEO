@@ -6,7 +6,6 @@ openai.api_base = os.getenv("api_base")
 openai.api_version = os.getenv("api_version")
 openai.api_key = os.getenv("api_key")
 
-
 def content_extraction(reference1,reference2,reference3):
     results={}
     try:
