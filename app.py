@@ -26,7 +26,7 @@ def summarize_api():
         return jsonify({"Error":str(er)})
 
 
-@app.route('/keyword', methods=['POST'])
+@app.route('/keywords', methods=['POST'])
 def generate_kw():
     try:
         
@@ -37,7 +37,7 @@ def generate_kw():
     except Exception as e2:
         return jsonify({"Error":str(e2)})
     
-@app.route('/tab3', methods=['POST'])
+@app.route('/metainfos', methods=['POST'])
 def generate_content():
     try:
         
