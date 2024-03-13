@@ -49,7 +49,7 @@ def generate_content():
     except Exception as e3:
         return jsonify({"Error":str(e3)})
 
-@app.route('/final-content', methods=['POST'])
+@app.route('/finalcontent', methods=['POST'])
 def generate_style():
     try:
         
