@@ -69,7 +69,7 @@ def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
         
     
     
-        if "Alt Text" in content_type:
+        if "Image Prompt" in content_type:
             system = f'''{persona}'''
             user_prompt = f'''Generate 5 ideas only for images with ALT text that can be added on blog post for the topic : {Topic} And optimize it for the keyword : {finalized_keyword} for SEO.
             Give output in dictionary with key name as Idea , Idea Description and ALT text.
@@ -92,7 +92,7 @@ def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
             stop=None
         )
             r_alt=response_alt.choices[0].message['content'].strip()
-            results["Alt Text"] = r_alt
+            results["Image Prompt"] = r_alt
         #results.append(r_alt)
         
     
