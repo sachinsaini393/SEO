@@ -368,7 +368,7 @@ def style_generation(ref1,ref2,ref3,Topic,Title, finalized_keyword,style):
         
         
     
-        if "Style-1 : Weekly Tech Blog" in style:
+        if "Weekly Tech Blog" in style:
             system12=f'''
         You have expertise in linguistics, natural language processing, and prompt engineering.
         Your task is to convert the provided text into an elaborate style guide. 
@@ -521,9 +521,9 @@ def style_generation(ref1,ref2,ref3,Topic,Title, finalized_keyword,style):
                 return article
         
             #results.append("Weekly Tech Blog:\n" + result(t_blog1,t_blog2,t_blog3,Topic,finalized_keyword))
-            results["Weekly Tech Blog:"]=result(t_blog1,t_blog2,t_blog3,Topic,finalized_keyword)
+            results["Weekly Tech Blog"]=result(t_blog1,t_blog2,t_blog3,Topic,finalized_keyword)
     
-        if "Style-2 : Descriptive Blog" in style:
+        if "Descriptive Blog" in style:
             system12=f'''
         You have expertise in linguistics, natural language processing, and prompt engineering.
         Your task is to convert the provided text into an elaborate style guide. 
@@ -677,7 +677,7 @@ def style_generation(ref1,ref2,ref3,Topic,Title, finalized_keyword,style):
             
             #results.append("Descriptive Blog:\n" + result(d_blog1,d_blog2,d_blog3,Topic,finalized_keyword))
             results["Descriptive Blog"]=result(d_blog1,d_blog2,d_blog3,Topic,finalized_keyword)
-        if "Style-3 : Glossary" in style:
+        if "Glossary" in style:
             system = '''
 
             You are a SEO Expert and your client is  an IT organisation which deals in these core services : IT consulting, business process outsourcing, digital transformation, application development, artificial intelligence, cloud services, data analytics, quality assurance, and IT infrastructure services.
