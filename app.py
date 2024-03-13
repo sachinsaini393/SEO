@@ -37,7 +37,7 @@ def generate_kw():
     except Exception as e2:
         return jsonify({"Error":str(e2)})
     
-@app.route('/metainfos', methods=['POST'])
+@app.route('/metaInfos', methods=['POST'])
 def generate_content():
     try:
         
@@ -49,7 +49,7 @@ def generate_content():
     except Exception as e3:
         return jsonify({"Error":str(e3)})
 
-@app.route('/finalcontent', methods=['POST'])
+@app.route('/finalContent', methods=['POST'])
 def generate_style():
     try:
         
