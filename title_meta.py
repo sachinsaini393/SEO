@@ -73,7 +73,14 @@ def meta(topic,keyword):
 def alt(topic,keywords):
     system = f'''{persona}'''
     user_prompt = f'''Generate 5 ideas only for images with ALT text that can be added on blog post for the topic : {topic} And optimize it for the keyword : {keywords} for SEO.
-            Give output in JSON format with key name as Idea , Idea Description and ALT text.
+            Give output in dictionary with key name as Idea Number,Idea description and ALT text only. In total there will be only these three keys in dictionary.
+             Example:
+          {{
+    "Idea1":{{
+      "Idea Description":"",
+  "ALT text":""
+    }}
+  }}
             
             '''
               
@@ -98,7 +105,7 @@ def alt(topic,keywords):
 
 ################################# Checking user choice #########################################
 
-def content_generation(Topic, finalized_keyword, content_type):
+def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
     results = {}
     try:
         
