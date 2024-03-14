@@ -115,8 +115,8 @@ def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
         if "Meta Description" in content_type:
             results["Meta Description"] = meta(Topic,finalized_keyword) 
                 
-        if "Alt Text" in content_type:
-            results["Alt Text"] = alt(Topic,finalized_keyword)
+        if "Image Prompt" in content_type:
+            results["Image Prompt"] = alt(Topic,finalized_keyword)
 
         return results
     
