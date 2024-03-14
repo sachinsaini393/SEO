@@ -72,7 +72,7 @@ def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
         if "Image Prompt" in content_type:
             system = f'''{persona}'''
             user_prompt = f'''Generate 5 ideas only for images with ALT text that can be added on blog post for the topic : {Topic} And optimize it for the keyword : {finalized_keyword} for SEO.
-            Give output in JSON format only with key name as Idea , Idea Description and ALT text.
+            Give output in dictionary format only with key name as Idea,Idea Description ,ALT text  and there values.
          
             '''
         #Give me a table with column names as Idea, Idea Description and ALT text.
