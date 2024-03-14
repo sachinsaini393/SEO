@@ -1,9 +1,9 @@
 import os
 from flask import Flask, request, jsonify
 import openai
-from Tab3 import content_generation
-from Tab1 import content_extraction
-from Tab2 import generate_keywords
+from title_meta import content_generation
+from Topic import content_extraction
+from Keywords import generate_keywords
 from Tab4 import *
 from flask_cors import CORS
 
