@@ -72,7 +72,8 @@ def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
         if "Image Prompt" in content_type:
             system = f'''{persona}'''
             user_prompt = f'''Generate 5 ideas only for images with ALT text that can be added on blog post for the topic : {Topic} And optimize it for the keyword : {finalized_keyword} for SEO.
-            Give output in dictionary with key name as Idea , Idea Description and ALT text.
+            Give output in JSON format only with key name as Idea , Idea Description and ALT text.
+            Example: "{\n\"Idea 1\": {\n    \"Idea Description\": \"Image showcasing the clean streets of Indore, highlighting its cleanliness.\",\n    \"ALT text\": \"Clean streets of Indore reflecting Indore as one of India's cleanest cities\"\n},\n\"Idea 2\": {\n    \"Idea Description\": \"Photo collage of various sanitation activities like street sweeping, waste collection in Surat.\",\n    \"ALT text\": \"Sanitation activities in Surat, showcasing Surat as one of India's cleanest cities\"\n},\n\"Idea 3\": {\n    \"Idea Description\": \"Infographic depicting the transformation of Indore and Surat into clean cities due to IT infrastructure services.\",\n    \"ALT text\": \"Indore and Surat transformation into cleanest cities in India due to IT infrastructure services\"\n},\n\"Idea 4\": {\n    \"Idea Description\": \"Side by side images of Indore and Surat showcasing their clean public spaces like parks, markets, etc.\",\n    \"ALT text\": \"Public spaces of Indore and Surat reflecting their status as India's cleanest cities\"\n},\n\"Idea 5\": {\n    \"Idea Description\": \"Image of a computer screen showing data analytics related to the cleanliness index of Indore and Surat.\",\n    \"ALT text\": \"Data analytics showcasing Indore and Surat as India's cleanest cities\"\n}\n}"
             
             '''
         #Give me a table with column names as Idea, Idea Description and ALT text.
