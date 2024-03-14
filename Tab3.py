@@ -74,7 +74,10 @@ def content_generation(r1,r2,r3,Topic, finalized_keyword, content_type):
             '''
             user_prompt = f'''Generate 5 ideas only for images with ALT text that can be added on blog post for the topic : {Topic} And optimize it for the keyword : {finalized_keyword} for SEO.
             Give output in dictionary with key name as Idea Number,Idea description and ALT text only. In total there will be only these three keys in dictionary.
-         
+            Example:
+            {{'Idea 1':'',
+             'Idea Description':'',
+             'ALT text':''}}
             '''
         #Give me a table with column names as Idea, Idea Description and ALT text.
               
