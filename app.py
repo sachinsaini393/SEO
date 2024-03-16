@@ -54,7 +54,7 @@ def generate_style():
     try:
         
         data4= request.get_json()
-        result4 = style_generation(data4['reference1'], data4['reference2'], data4['reference3'], data4['Topic'], data4['Title'], data4['finalized_keyword'], data4['style'])
+        result4 = content(data4['reference1'], data4['reference2'], data4['reference3'], data4['Topic'], data4['Title'], data4['finalized_keyword'], data4['style'])
     
         return jsonify(result4)
     
