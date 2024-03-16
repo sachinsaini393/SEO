@@ -4,7 +4,7 @@ import openai
 from title_meta import content_generation
 from Topic import content_extraction
 from Keywords import generate_keywords
-from final_content import content
+from final_content import *
 from flask_cors import CORS
 
 # Define the Flask app
