@@ -7,9 +7,9 @@ openai.api_key = os.getenv("api_key")
 
 ############# weekly tech blog format ##################
 tech_format=''' 
-###Given Title
+##Given Title
 
-###Blog Subtitle
+##Blog Subtitle
    
 ##Headshot of Digitally Cognizant author Tech to Watch
 ##Tech to Watch Blog
@@ -24,7 +24,7 @@ tech_format='''
    Insights, opinions, and expert analysis related to the blog topic, given by a representative from Cognizant.
     [Additional paragraphs as needed]
     
-####Digital Business & Technology , [Relevant tags and keywords here]
+##Digital Business & Technology , [Relevant tags and keywords here]
 
 Please note,  The "Cognizant Take" and "In the news" sections may contain more than one detailed paragraph. '''
 
@@ -64,9 +64,9 @@ descriptive_format='''
 ##[Subtitle of the Blog]
 
 
-#Point1 
-#Point2
-#Point3
+##Point1 
+##Point2
+##Point3
 
 
 [Initial Context about the topic]
