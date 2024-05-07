@@ -88,7 +88,7 @@ def gpt4(prompt,persona=None):
                 {"role": "user", "content": prompt}
             ]
     response = openai.ChatCompletion.create(
-            engine="GPT4-Turbo",
+            engine="AIKillsSEO",
             messages=messages,
             temperature=0.8,
             max_tokens=4000,
@@ -115,7 +115,7 @@ def article_style_guide(r1,r2,r3,format_blog,style,Title,finalized_keyword):
         - 
     '''
     response = openai.ChatCompletion.create(
-            engine="GPT4-Turbo",
+            engine="AIKillsSEO",
             messages=[
                 {"role": "system", "content": system2},
                 {"role": "user", "content": user_prompt2}
@@ -202,7 +202,7 @@ def glossary(Topic,keyword):
         '''
     user_prompt = f'Generate 5 FAQs on {Topic} and optimize it for {keyword} for SEO. Explain FAQs in 100-150 words.'
     response = openai.ChatCompletion.create(
-            engine="GPT4-Turbo",
+            engine="AIKillsSEO",
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": user_prompt}
