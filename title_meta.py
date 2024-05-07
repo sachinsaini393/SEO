@@ -24,7 +24,7 @@ def title(topic,keywords):
         '''
     user_prompt_title = f'Write one descriptive title for the topic {topic} and optimize it for keywords {keywords} with character limit of 50-60 characters.'
     response_title = openai.ChatCompletion.create(
-            engine="AIKillsSEO",
+            engine="GPT4-Turbo",
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": user_prompt_title}
@@ -49,7 +49,7 @@ def meta(topic,keyword):
         '''
     user_prompt_meta = f'Write one descriptive Meta Description for the topic {topic} and optimize it for keywords {keyword} with character limit of 150 -160 characters'
     response_meta = openai.ChatCompletion.create(
-            engine="AIKillsSEO",
+            engine=""GPT4-Turbo",
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": user_prompt_meta}
@@ -86,7 +86,7 @@ def alt(topic,keywords):
               
             
     response_alt = openai.ChatCompletion.create(
-            engine="AIKillsSEO",
+            engine="GPT4-Turbo",
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": user_prompt}
