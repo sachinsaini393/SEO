@@ -13,7 +13,7 @@ CORS(app)
 
 
 # Define the API endpoint
-@app.route('/topics', methods=["POST"])
+@app.route('/Topic-Generation', methods=["POST"])
 def summarize_api():
     try:
         
