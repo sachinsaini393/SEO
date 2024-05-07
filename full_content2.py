@@ -1,3 +1,4 @@
+import os
 import openai
 openai.api_type = os.getenv("api_type")
 openai.api_base = os.getenv("api_base")
