@@ -26,7 +26,7 @@ def similar_k(ref1,ref2,ref3,t):
         
         '''  
     response_similar = openai.ChatCompletion.create(  
-        engine="GPT4-Turbo",  
+        engine="AIKillsSEO",  
         messages=[{"role":"system","content":system},
         {"role":"user","content":user_prompt}],  
         temperature=0.8,  
@@ -54,7 +54,7 @@ def long_tail(ref1,ref2,ref3,t):
         Extract top five long tail keywords only for this topic : {t} from these three given article/blog post for SEO: {ref1},{ref2},{ref3}.
         '''  
     response_long_tail = openai.ChatCompletion.create(  
-        engine="GPT4-Turbo",  
+        engine="AIKillsSEO",  
         messages=[{"role":"system","content":system},
         {"role":"user","content":user_prompt}],  
         temperature=0.8,  
@@ -82,7 +82,7 @@ def short_t(ref1,ref2,ref3,t):
         Extract top five Short Tail keywords only for this topic : {t} from these three given article/blog post for SEO: {ref1},{ref2},{ref3}.
         '''  
     response_short_tail = openai.ChatCompletion.create(  
-        engine="GPT4-Turbo",  # Use an actual engine  
+        engine="AIKillsSEO",  # Use an actual engine  
         messages=[{"role":"system","content":system},
         {"role":"user","content":user_prompt}],  
         temperature=0.8,  
@@ -109,7 +109,7 @@ def semant_k(ref1,ref2,ref3,t):
         Extract top five Semantically keywords only for this topic : {t} from these three given article/blog post for SEO: {ref1},{ref2},{ref3}. 
         '''  
     response_semantically = openai.ChatCompletion.create(  
-        engine="GPT4-Turbo",  # Use an actual engine  
+        engine="AIKillsSEO",  # Use an actual engine  
         messages=[{"role":"system","content":system},
         {"role":"user","content":user_prompt}],  
         temperature=0.8,  
