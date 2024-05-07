@@ -20,7 +20,7 @@ def content_extraction(reference1,reference2,reference3):
 
         user_prompt = f'Extract top 5 Topic from these three given articles/blog post for SEO : {reference1},{reference2},{reference3}. '
         response = openai.ChatCompletion.create(
-            engine="GPT4-Turbo",
+            engine="AIKillsSEO",
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": user_prompt}
